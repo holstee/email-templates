@@ -115,11 +115,7 @@
 		}
 		/* end Android targeting */
 
-		body, p{
-			font-family: Georgia,'Times New Roman',Serif;
-			color:#333;
-			line-height:23px !important;
-		}
+
 
 	</style>
 
@@ -141,6 +137,45 @@
 		/* Target Outlook 2007 and 2010 */
 		</style>
 	<![endif]-->
+
+<style>
+	a {
+		color: #EC5637;
+		text-decoration: none;
+	}
+	#forgroundTable tr{
+		border-bottom:1px solid #ddd;
+	}
+	#forgroundTable td{
+		padding:20px 20px;
+	}
+	#forgroundTable tr:last-child{
+		border-bottom:none;
+	}
+	ul{
+		list-style: none
+	}
+	li{
+		display:inline-block;
+	}
+	li:after{
+		content:"|";
+		margin:0px 3px;
+		color:#ddd;
+	}
+	li:last-child:after{
+		content:"";
+	}
+	#footer a{
+		color:#999;
+	}
+	body, p{
+		font-family: Georgia,'Times New Roman',Serif;
+		color:#333;
+		line-height:23px !important;
+	}
+</style>
+
 </head>
 <body>
 <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
@@ -149,36 +184,6 @@
 		<td valign="top"> 
 		<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
 		<table cellpadding="0" cellspacing="0" border="0" align="center" id="forgroundTable">
-
-		<style>
-			#forgroundTable tr{
-				border-bottom:1px solid #ddd;
-			}
-			#forgroundTable td{
-				padding:20px 20px;
-			}
-			#forgroundTable tr:last-child{
-				border-bottom:none;
-			}
-			ul{
-				list-style: none
-			}
-			li{
-				display:inline-block;
-			}
-			li:after{
-				content:"|";
-				margin:0px 3px;
-				color:#ddd;
-			}
-			li:last-child:after{
-				content:"";
-			}
-			#footer a{
-				color:#999;
-			}
-		</style>
-
 
 			<tr>
 				<td width="600" valign="top" align="center">
@@ -225,7 +230,7 @@
 
 		</td>
 	</tr>
-</table>  
+</table>
 <!-- End of wrapper table -->
 </body>
 </html>
