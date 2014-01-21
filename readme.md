@@ -4,5 +4,5 @@ You gotta take da source code and put it into da super simple [mailchimp inliner
 
 ---
 
-* http://holstee.github.io/email-templates/email-templates/giftcard-email/index.html
-* http://holstee.github.io/email-templates/email-templates/giftcard-email/source.html
+* http://holstee.github.io/email-templates/giftcard-email/index.html
+* http://holstee.github.io/email-templates/giftcard-email/source.html
