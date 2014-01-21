@@ -50,11 +50,7 @@
 
 		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
 		Bring inline: Yes. */
-		a {
-			color: #EC5637;
-			text-decoration: none;
-		}
-
+		
 
 		/***************************************************
 		****************************************************
@@ -143,7 +139,7 @@
 		color: #EC5637;
 		text-decoration: none;
 	}
-	#forgroundTable tr{
+	#forgroundTable tr.border{
 		border-bottom:1px solid #ddd;
 	}
 	#forgroundTable td{
@@ -157,22 +153,21 @@
 	}
 	li{
 		display:inline-block;
-	}
-	li:after{
-		content:"|";
-		margin:0px 3px;
-		color:#ddd;
-	}
-	li:last-child:after{
-		content:"";
+		margin: 0;
+		padding: 0;
 	}
 	#footer a{
 		color:#999;
 	}
-	body, p{
+	body, p, li, ul{
 		font-family: Georgia,'Times New Roman',Serif;
 		color:#333;
-		line-height:23px !important;
+		line-height:23px;
+		font-size: 14px;
+	}
+	.divide{
+		margin:0px 3px;
+		color:#ddd;
 	}
 </style>
 
@@ -181,25 +176,25 @@
 <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
 <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
 	<tr>
-		<td valign="top"> 
+		<td valign="top">
 		<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
 		<table cellpadding="0" cellspacing="0" border="0" align="center" id="forgroundTable">
 
-			<tr>
+			<tr class="border">
 				<td width="600" valign="top" align="center">
 					<a href="http://holstee.com" target="_blank">
 						<img class="image_fix" src="http://cdn.shopify.com/s/files/1/0031/5352/files/holstee_logo_2.png?4803" alt="Holstee" title="Holstee Logo" width="150" height="30" />
 					</a>
 				</td>
 			</tr>
-			<tr>
+			<tr class="border">
 				<td width="600" valign="top">
 
 					<p>Thanks for purchasing a Holstee Gift Card!</p>
 
 					<p>Here is a link to view or print your gift card:</p>
 
-					<p><a href="http://htmlemailboilerplate.com" target ="_blank" title="Styling Links">xxxxxLINKxxxxxx</a></p>
+					<p><a href="{{ gift_card.url }}" target ="_blank" title="Styling Links">{{ gift_card.url }}</a></p>
 
 					<p>If this is for a friend, just note the number on the card or privately share the link with them.</p>
 
@@ -210,7 +205,7 @@
 
 				</td>
 			</tr>
-			<tr>
+			<tr class="border">
 				<td width="600" valign="top" align="center">
 					<p>For any other questions or concerns, feel free to give us a ring at <a href="tel:9173360603" class="mobile_link">(917) 336-0603</a> or email us at <a href="mailto:urgent@holstee.com">urgent@holstee.com</a>.</p>
 				</td>
@@ -219,8 +214,11 @@
 				<td width="600" valign="top" align="center">
 					<ul>
 						<li><a href="http://pinterest.com/holstee" target="_blank" >Pinterest</a></li>
+						<li class="divide">|</li>
 						<li><a href="http://twitter.com/holstee" target="_blank">Twitter</a></li>
+						<li class="divide">|</li>
 						<li><a href="http://facebook.com/holstee" target="_blank">Facebook</a></li>
+						<li class="divide">|</li>
 						<li><a href="http://instagram.com/holstee" target="_blank">Instagram</a></li>
 					</ul>
 				</td>
